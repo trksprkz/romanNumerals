@@ -2,10 +2,13 @@ import React from 'react'
 import '../App.css'
 import background from '../images/simon-boxus-Iso1cN1AXzA-unsplash.jpg'
 import { Link } from 'react-router-dom'
-const {romanToArab, arabToRoman, isValidArab, isValidRoman} = require('roman-numbers')
+import { arabToRoman } from 'roman-numbers'
 function Rnumerals() {
-    function
-    romanToArab('IX')
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        <h2 class="block text-blue-300 py-2 font-bold mb-2">{arabToRoman(e.target.elements.convert.value)}</h2>
+      }
   return (
     <body class="leading-normal tracking-normal text-indigo-400 bg-cover bg-fixed w-screen h-screen" style={{
         backgroundImage: `url(${background})` }}>
@@ -41,7 +44,8 @@ function Rnumerals() {
         <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-center overflow-y-hidden">
 
 
-          <form class="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4">
+          <form class="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4"
+          onSubmit={handleSubmit}>
             <div class="mb-4">
               <label class="block text-blue-300 py-2 font-bold mb-2" for="emailaddress">
                 Enter A Number:
@@ -57,7 +61,7 @@ function Rnumerals() {
             <div class="flex items-center justify-between pt-4">
               <button
                 class="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
-                type="button" onClick={}
+                type="submit"
               >
                 Sign Up
               </button>
