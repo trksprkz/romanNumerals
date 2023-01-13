@@ -10,7 +10,7 @@ function Home() {
     <div class="w-full container mx-auto">
       <div class="w-full flex items-center justify-between">
         <a class="flex items-center text-indigo-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="www.com">
-          R.<span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">Numerals</span>
+          R.<span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-purple-500">Numerals</span>
         </a>
 
         <div class="flex w-1/2 justify-end content-center">
@@ -35,12 +35,8 @@ function Home() {
 
     <div class="container pt-24 md:pt-36 mx-auto flex flex-wrap flex-col md:flex-row items-center">
       <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
-        <h1 class="my-4 text-3xl md:text-5xl text-white opacity-75 font-bold leading-tight text-center md:text-left">
-          Main
-          <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">
-            Hero Message
-          </span>
-          to sell yourself!
+        <h1 class="my-4 text-3xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-purple-500 font-bold leading-tight text-center md:text-left">
+          Convert any number to Roman Numerals
         </h1>
         <p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left">
           Sub-hero message, not too long and not too short. Make it just right!
