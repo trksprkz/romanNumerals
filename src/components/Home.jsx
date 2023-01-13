@@ -1,9 +1,11 @@
 import React from 'react'
 import '../App.css'
+import background from '../images/simon-boxus-Iso1cN1AXzA-unsplash.jpg'
 function Home() {
   return (
 
-<body class="leading-normal tracking-normal text-indigo-400 m-6 bg-cover bg-fixed">
+<body class="leading-normal tracking-normal text-indigo-400 bg-cover bg-fixed w-screen h-screen" style={{
+      backgroundImage: `url(${background})` }}>
   <div class="h-full">
     <div class="w-full container mx-auto">
       <div class="w-full flex items-center justify-between">
