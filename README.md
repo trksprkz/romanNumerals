@@ -5,7 +5,7 @@
 ![PXL_20230113_073244343](https://user-images.githubusercontent.com/54684726/212263577-e668a996-231d-49ee-b27e-1ae2313d3477.jpg)
 ![PXL_20230113_073251324](https://user-images.githubusercontent.com/54684726/212263587-abe888a0-9a4b-4fe6-82ce-2766398c06a7.jpg)
 
-
+# Created using React, React Router, Tailwind CSS
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -14,7 +14,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm install` , `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
