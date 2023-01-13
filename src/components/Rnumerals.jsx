@@ -2,7 +2,10 @@ import React from 'react'
 import '../App.css'
 import background from '../images/simon-boxus-Iso1cN1AXzA-unsplash.jpg'
 import { Link } from 'react-router-dom'
+const {romanToArab, arabToRoman, isValidArab, isValidRoman} = require('roman-numbers')
 function Rnumerals() {
+    function
+    romanToArab('IX')
   return (
     <body class="leading-normal tracking-normal text-indigo-400 bg-cover bg-fixed w-screen h-screen" style={{
         backgroundImage: `url(${background})` }}>
@@ -35,23 +38,31 @@ function Rnumerals() {
       </div>
 
       <div class="container pt-24 md:pt-36 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-        <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
-          <h1 class="my-4 text-3xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-purple-500 font-bold leading-tight text-center md:text-left">
-            Convert Any Number To Roman Numerals
-          </h1>
-          <p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left">
-            What are you waiting for?
-          </p>
+        <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-center overflow-y-hidden">
 
+
+          <form class="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4">
             <div class="mb-4">
-
+              <label class="block text-blue-300 py-2 font-bold mb-2" for="emailaddress">
+                Enter A Number:
+              </label>
+              <input
+                class="shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
+                id="convert"
+                type="text"
+                placeholder="129"
+              />
             </div>
 
-            <div class="flex justify-around items-center pt-4">
-            <Link to='/convert' class="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out">Check it out</Link>
-
+            <div class="flex items-center justify-between pt-4">
+              <button
+                class="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
+                type="button" onClick={}
+              >
+                Sign Up
+              </button>
             </div>
-
+          </form>
         </div>
 
         <div class="w-full xl:w-3/5 p-12 overflow-hidden">
