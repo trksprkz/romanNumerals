@@ -3,6 +3,8 @@ import '../App.css'
 import background from '../images/simon-boxus-Iso1cN1AXzA-unsplash.jpg'
 import { Link } from 'react-router-dom'
 import preview from '../images/preview.png'
+import appStore from '../images/appstore.png'
+import gPlay from '../images/gplay.png'
 function Home() {
   return (
 
@@ -67,8 +69,12 @@ function Home() {
           Download our app:
         </p>
         <div class="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
-          <img src="App Store.svg" class="h-12 pr-12 transform hover:scale-125 duration-300 ease-in-out" />
-          <img src="Play Store.svg" class="h-12 transform hover:scale-125 duration-300 ease-in-out" />
+          <img src={appStore} class="h-12 pr-12 transform hover:scale-125 duration-300 ease-in-out"
+            alt='App Store logo'
+          />
+          <img src={gPlay} class="h-12 transform hover:scale-125 duration-300 ease-in-out"
+            alt='Google Play logo'
+          />
         </div>
       </div>
 
