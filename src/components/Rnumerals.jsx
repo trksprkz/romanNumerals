@@ -3,8 +3,8 @@ import '../App.css'
 import background from '../images/simon-boxus-Iso1cN1AXzA-unsplash.jpg'
 import { Link } from 'react-router-dom'
 import { arabToRoman } from 'roman-numbers'
-function Rnumerals() {
 
+function Rnumerals() {
     const [enteredText, setEnteredText] = useState("");
     const [submittedText, setSubmittedText] = useState(null);
     const textChangeHandler = (i) => {
@@ -13,33 +13,38 @@ function Rnumerals() {
 
     const submitHandler = (event) => {
         event.preventDefault();
-        setSubmittedText(enteredText);
-        setEnteredText("");
+        setSubmittedText(enteredText)
+        setEnteredText();
           };
+    const converted = (submittedText) => {
+        arabToRoman(submittedText)
+    }
+
   return (
-    <body class="leading-normal tracking-normal text-indigo-400 bg-cover bg-fixed w-screen h-screen" style={{
+    <body className="leading-normal tracking-normal text-indigo-400 bg-cover bg-fixed w-screen h-screen" style={{
         backgroundImage: `url(${background})` }}>
-    <div class="h-full">
-      <div class="w-full container mx-auto">
-        <div class="w-full flex items-center justify-between">
-        <Link to='/' class="flex items-center text-indigo-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl">
-          R.<span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-purple-500">Numerals</span>
+    <div className="h-full">
+      <div className="w-full container mx-auto">
+        <div className="w-full flex items-center justify-between">
+        <Link to='/' className="flex items-center text-indigo-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl">
+          R.<span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-purple-500">Numerals</span>
         </Link>
 
 
-          <div class="flex w-1/2 justify-end content-center">
-            <a class="inline-block text-blue-300 no-underline hover:text-pink-500 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform lg:text-indigo-400 hover:scale-125 duration-300 ease-in-out" href="https://twitter.com/intent/tweet?url=#">
-              <svg class="fill-current h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+          <div className="flex w-1/2 justify-end content-center">
+            <a className="inline-block text-blue-300 no-underline hover:text-pink-500 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform lg:text-indigo-400 hover:scale-125 duration-300 ease-in-out"
+                href="https://twitter.com/intent/tweet?url=#">
+              <svg className="fill-current h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                 <path
                   d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"
                 ></path>
               </svg>
             </a>
             <a
-              class="inline-block text-blue-300 no-underline hover:text-pink-500 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 lg:text-indigo-400 transform hover:scale-125 duration-300 ease-in-out"
+              className="inline-block text-blue-300 no-underline hover:text-pink-500 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 lg:text-indigo-400 transform hover:scale-125 duration-300 ease-in-out"
               href="https://www.facebook.com/sharer/sharer.php?u=#"
             >
-              <svg class="fill-current h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+              <svg className="fill-current h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                 <path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path>
               </svg>
             </a>
@@ -47,39 +52,40 @@ function Rnumerals() {
         </div>
       </div>
 
-      <div class="container pt-24 md:pt-36 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-        <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-center overflow-y-hidden">
+      <div className="container pt-24 md:pt-36 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+        <div className="flex flex-col w-full xl:w-2/5 justify-center lg:items-center overflow-y-hidden">
 
 
-          <form class="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4"
+          <form className="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4"
           onSubmit={submitHandler}>
-            <div class="mb-4">
-              <label class="block text-blue-300 py-2 font-bold mb-2" htmlFor="convert">
+            <div className="mb-4">
+              <label className="block text-blue-300 py-2 font-bold mb-2" htmlFor="convert">
                 Enter A Number:
               </label>
               <input
-                class="shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
+                className="shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
                 id="convert"
-                type="text"
+                type="number"
                 value={enteredText}
-                placeholder="129"
+                placeholder="Some number..."
                 onChange={textChangeHandler}
               />
             </div>
 
-            <div class="flex items-center justify-between pt-4">
+            <div className="flex items-center justify-between pt-4">
               <button
-                class="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
+                className="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
                 type="submit"
               >
                 Sign Up
               </button>
             </div>
           </form>
+          {submittedText && (<p>Converted that's: {converted} </p>)}
         </div>
 
-        <div class="w-full xl:w-3/5 p-12 overflow-hidden">
-          <img class="flex mx-auto w-full md:w-4/5 transform -rotate-6 transition hover:scale-105 duration-700 ease-in-out hover:rotate-6" src="macbook.svg" />
+        <div className="w-full xl:w-3/5 p-12 overflow-hidden">
+          <img className="flex mx-auto w-full md:w-4/5 transform -rotate-6 transition hover:scale-105 duration-700 ease-in-out hover:rotate-6" src="macbook.svg" />
         </div>
 
 
