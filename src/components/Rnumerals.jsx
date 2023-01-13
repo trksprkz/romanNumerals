@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { useState} from 'react'
 import '../App.css'
 import background from '../images/simon-boxus-Iso1cN1AXzA-unsplash.jpg'
 import { Link } from 'react-router-dom'
 import { arabToRoman } from 'roman-numbers'
 function Rnumerals() {
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        <h2 class="block text-blue-300 py-2 font-bold mb-2">{arabToRoman(e.target.elements.convert.value)}</h2>
-      }
+    const [enteredText, setEnteredText] = useState("");
+    const [submittedText, setSubmittedText] = useState(null);
+    const textChangeHandler = (i) => {
+        setEnteredText(i.target.value);
+        }
+
+    const submitHandler = (event) => {
+        event.preventDefault();
+        setSubmittedText(enteredText);
+        setEnteredText("");
+          };
   return (
     <body class="leading-normal tracking-normal text-indigo-400 bg-cover bg-fixed w-screen h-screen" style={{
         backgroundImage: `url(${background})` }}>
@@ -45,16 +52,18 @@ function Rnumerals() {
 
 
           <form class="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4"
-          onSubmit={handleSubmit}>
+          onSubmit={submitHandler}>
             <div class="mb-4">
-              <label class="block text-blue-300 py-2 font-bold mb-2" for="emailaddress">
+              <label class="block text-blue-300 py-2 font-bold mb-2" htmlFor="convert">
                 Enter A Number:
               </label>
               <input
                 class="shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
                 id="convert"
                 type="text"
+                value={enteredText}
                 placeholder="129"
+                onChange={textChangeHandler}
               />
             </div>
 
