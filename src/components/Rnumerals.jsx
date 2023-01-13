@@ -5,21 +5,22 @@ import { Link } from 'react-router-dom'
 import { arabToRoman } from 'roman-numbers'
 
 function Rnumerals() {
-    const [enteredText, setEnteredText] = useState("");
+    const [enteredText, setEnteredText] = useState('');
     const [submittedText, setSubmittedText] = useState(null);
+
     const textChangeHandler = (i) => {
         setEnteredText(i.target.value);
-        }
+    }
 
     const submitHandler = (event) => {
         event.preventDefault();
         setSubmittedText(enteredText)
-        setEnteredText();
+        setEnteredText('');
           };
-    const converted = (submittedText) => {
-        arabToRoman(submittedText)
+    const converted = () => {
+        const toInt = parseInt(submittedText)
+        return arabToRoman(toInt)
     }
-
   return (
     <body className="leading-normal tracking-normal text-indigo-400 bg-cover bg-fixed w-screen h-screen" style={{
         backgroundImage: `url(${background})` }}>
@@ -81,7 +82,7 @@ function Rnumerals() {
               </button>
             </div>
           </form>
-          {submittedText && (<p>Converted that's: {converted} </p>)}
+          {submittedText && (<p>Converted that's: <strong>{converted()}</strong></p>)}
         </div>
 
         <div className="w-full xl:w-3/5 p-12 overflow-hidden">
