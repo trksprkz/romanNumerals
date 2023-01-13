@@ -593,6 +593,18 @@ video {
   }
 }
 
+.relative {
+  position: relative;
+}
+
+.right-1\/4 {
+  right: 25%;
+}
+
+.left-1\/4 {
+  left: 25%;
+}
+
 .m-6 {
   margin: 1.5rem;
 }
@@ -925,6 +937,14 @@ video {
 
 .opacity-75 {
   opacity: 0.75;
+}
+
+.opacity-40 {
+  opacity: 0.4;
+}
+
+.opacity-70 {
+  opacity: 0.7;
 }
 
 .shadow-lg {

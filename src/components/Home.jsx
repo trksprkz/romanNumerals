@@ -2,7 +2,7 @@ import React from 'react'
 import '../App.css'
 import background from '../images/simon-boxus-Iso1cN1AXzA-unsplash.jpg'
 import { Link } from 'react-router-dom'
-
+import preview from '../images/preview.png'
 function Home() {
   return (
 
@@ -57,7 +57,9 @@ function Home() {
       </div>
 
       <div class="w-full xl:w-3/5 p-12 overflow-hidden">
-        <img class="flex mx-auto w-full md:w-4/5 transform -rotate-6 transition hover:scale-105 duration-700 ease-in-out hover:rotate-6" src="macbook.svg" />
+        <img class="flex mx-auto w-full md:w-4/5 transform -rotate-6 transition hover:scale-105 duration-700 ease-in-out hover:rotate-6 opacity-70" src={preview}
+          alt='preview of convert page'
+        />
       </div>
 
       <div class="mx-auto md:pt-16">

@@ -54,7 +54,7 @@ function Rnumerals() {
       </div>
 
       <div className="container pt-24 md:pt-36 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-        <div className="flex flex-col w-full xl:w-2/5 justify-center lg:items-center overflow-y-hidden">
+        <div className="flex flex-col w-full xl:w-2/5 relative left-1/4 justify-center lg:items-center overflow-y-hidden">
 
 
           <form className="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4"
@@ -85,9 +85,7 @@ function Rnumerals() {
           {submittedText && (<p>Converted that's: <strong>{converted()}</strong></p>)}
         </div>
 
-        <div className="w-full xl:w-3/5 p-12 overflow-hidden">
-          <img className="flex mx-auto w-full md:w-4/5 transform -rotate-6 transition hover:scale-105 duration-700 ease-in-out hover:rotate-6" src="macbook.svg" />
-        </div>
+
 
 
       </div>
